@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.as.mateusz.LED_Controller.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp">
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Disconnected"
+            android:id="@+id/textViewConnection"
+            android:textColor="#FFFFFF"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:textSize="16dp"
+            android:lines="2"
+            android:layout_weight="6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearEffectsSelector"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Effects"
+            android:id="@+id/textView"
+            android:textColor="#FFFFFF"
+            android:lines="1"
+            android:gravity="left|bottom"
+            android:textSize="12dp"
+            android:layout_gravity="top|left" />
+
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:spinnerMode="dialog"
+            android:background="@android:drawable/btn_dropdown"
+            android:gravity="top|left" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearConstancColorRed"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:baselineAligned="false"
+        android:measureWithLargestChild="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.85">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Red color"
+                android:id="@+id/textView2"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp" />
+
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/seekBarRed"
+                android:layout_gravity="center_horizontal"
+                android:max="255"
+                android:progress="1"
+                android:indeterminate="false" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="100%"
+            android:id="@+id/textViewRed"
+            android:textSize="16dp"
+            android:textIsSelectable="true"
+            android:layout_weight="0.15"
+            android:textColor="#FF0000"
+            android:lines="3"
+            android:gravity="center_vertical|right" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/LinearConstancColorGreen"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.85">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Green color"
+                android:id="@+id/textView3"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp" />
+
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/seekBarGreen"
+                android:layout_gravity="center_horizontal"
+                android:max="255"
+                android:progress="1"
+                android:indeterminate="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="100%"
+            android:id="@+id/textViewGreen"
+            android:textSize="16dp"
+            android:textIsSelectable="true"
+            android:layout_weight="0.15"
+            android:textColor="#00FF00"
+            android:lines="3"
+            android:gravity="center_vertical|right" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/LinearConstancColorBlue"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.85">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Blue color"
+                android:id="@+id/textView4"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp" />
+
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/seekBarBlue"
+                android:layout_gravity="center_horizontal"
+                android:max="255"
+                android:progress="1"
+                android:indeterminate="false" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="100%"
+            android:id="@+id/textViewBlue"
+            android:textSize="16dp"
+            android:textIsSelectable="true"
+            android:layout_weight="0.15"
+            android:textColor="#0000FF"
+            android:lines="3"
+            android:gravity="center_vertical|right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearConstancColorWhite"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.85">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="White color"
+                android:id="@+id/textView5"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp" />
+
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/seekBarWhite"
+                android:layout_gravity="center_horizontal"
+                android:max="255"
+                android:progress="1"
+                android:indeterminate="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="100%"
+            android:id="@+id/textViewWhite"
+            android:textSize="16dp"
+            android:textIsSelectable="true"
+            android:layout_weight="0.15"
+            android:textColor="#FFFFFF"
+            android:lines="3"
+            android:gravity="center_vertical|right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearConstancColorPicker"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color picker"
+            android:id="@+id/buttonColorPicker"
+            android:layout_weight="0.5" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LinearLayoutSpeed">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.85">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:text="Brightness"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp" />
+
+            <SeekBar
+                android:id="@+id/seekBarSpeed"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:indeterminate="false"
+                android:max="16"
+                android:progress="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewBrightness"
+            android:layout_width="0px"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.15"
+            android:gravity="center_vertical|right"
+            android:lines="3"
+            android:text="0/16"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="true"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

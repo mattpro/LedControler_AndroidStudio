@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LED Controller</string>
+    <string name="sub_name">Bluetooth LE LED control</string>
+
+    <string-array name="EffectsName">
+        <item>Constans color</item>
+        <item>Fire</item>
+        <item>Running rainbow</item>
+    </string-array>
+</resources>
